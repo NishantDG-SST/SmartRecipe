@@ -79,7 +79,7 @@ const fetchRecipe = async () => {
 
 const fetchYouTubeVideo = async (recipeName) => {
     try {
-        const searchQuery = encodeURIComponent(`${recipeName} recipe cooking`);
+        const searchQuery = encodeURIComponent(`${recipeName} recipe`);
         const youtubeApiKey = 'AIzaSyAE8p39ZGJPCips_CDmhx9d59QoMUwodHs';
         const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchQuery}&key=${youtubeApiKey}&type=video&maxResults=1`);
         const data = await response.json();
